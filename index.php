@@ -4,8 +4,13 @@
 require './Classes/Usuario.php';
 use Classes\Usuario;
 /* API RESTFul em PHP puro */
+header('Access-Control-Allow-Origin: *');
 //Informa para o cliente que será retornado JSON
 header('Access-Control-Allow-Origin: *');
+header('Content-type: application/json');
+header('Access-Control-Allow-Methods: POST, GET, PUT, DELETE');
+
+
 header('Content-type: application/json');
 //Captura os parâmetros
 $param = filter_input_array(INPUT_GET, FILTER_DEFAULT);
